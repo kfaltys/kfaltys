@@ -1,1 +1,31 @@
+#In expression field
+calculate_field(!PR_TYP_NM1!)
 
+#In Code Block
+def calculate_field(PR_TYP_NM1):
+    if PR_TYP_NM1 in ["LAND - INDUSTRIAL", 
+        "INDUSTRIAL-PREFERRED",
+        "RAILROAD",
+        "COMMERCIAL-PREFERRED",
+        "COMMERCIAL-NON PREFERRED", 
+        "LAND-COMMERCIAL",
+        "INDUSTRIAL-NON PREFERRED",
+        "LAND-INDUSTRIAL",
+        "UTILITY",
+        "MED/CARE FACILITY"]:
+        return "non-residential"
+    elif PR_TYP_NM1 in ["RESIDENTIAL",
+        "LOW INCOME RENTAL",
+        "APARTMENT",
+        "VACANT LAND-RESIDENTIAL",
+        "RESIDENTIAL-TWO UNIT",
+        "VACANT LAND-APARTMENT",
+        "TRIPLEX",
+        "RESIDENTIAL-ZERO LOT LINE",
+        "CONDOMINIUM",
+        "CONDO GARAGE/MISCELLANEOUS",
+        "TOWNHOUSE",
+        "COMMON AREA"]:
+        return "residential"
+    else:
+        return "DefaultResult"
