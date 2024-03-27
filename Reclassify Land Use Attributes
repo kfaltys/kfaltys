@@ -1,0 +1,41 @@
+#In expression field
+calculate_field(!landcover!)
+
+#In code block
+def calculate_field(landcover):
+    if landcover == "11":
+        return "Residential"
+    elif landcover == "13":
+        return "Industrial"
+    elif landcover == "14":
+        return "Transportation, Communications, and Utilities"
+    elif landcover == "16":
+        return "Mixed Urban"
+    elif landcover == "17":
+        return "Other Urban Land"
+    elif landcover == "21":
+        return "Cropland and Pasture"
+    elif landcover == "22":
+        return "Horticultural Areas"
+    elif landcover == "24":
+        return "Other Agricultural Land"
+    elif landcover == "31":
+        return "Herbaceaous Rangeland"
+    elif landcover == "32":
+        return "Shrub and Brush Rangeland"
+    elif landcover == "33":
+        return "Mixed Rangeland"
+    elif landcover == "42":
+        return "Evergreen Forest Land"
+    elif landcover == "53":
+        return "Reservoirs"
+    elif landcover == "54":
+        return "Bays and Estuaries"
+    elif landcover == "62":
+        return "Nonforested Wetland"
+    elif landcover == "75":
+        return "Strip Mines, Quarries, and Gravel Pits"
+    elif landcover == "76":
+        return "Transitional Areas"
+    else:
+        return "Uknown"
